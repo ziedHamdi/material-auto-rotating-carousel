@@ -7,19 +7,17 @@ const Button = require('@material-ui/core/Button').default;
 let index = 1;
 <div style={{ position: 'relative', width: '100%', height: 500 }}>
   <Button onClick={() => {
-      index++; 
-      setState({ open: true })
+      setState({ open: true, index })
     }
   }>Click to open carousel at index {index}</Button>
   <AutoRotatingCarousel
-    slideIndex={index}
+    slideIndex={state.index}
     label='Get started'
     open={state.open}
     onClose={() => setState({ open: false })}
     onStart={() => setState({ open: false })}
     onChange={(newIndex)=> {
-      console.log("onChange called : ", newIndex, ":", new Error()) 
-      index = newIndex
+      setState( {index:newIndex} )
     }}
     style={{ position: 'absolute' }}
   >
