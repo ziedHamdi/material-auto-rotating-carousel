@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/TeamWertarbyte/material-auto-rotating-carousel.svg?branch=next)](https://travis-ci.org/TeamWertarbyte/material-auto-rotating-carousel)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-So you wrote a great app and deployed it and everything. But how do you introduce new users to your app? Well, the Material design guidelines have a solution: Displaying the top benefits in a beautiful [auto-rotating carousel](https://material.io/design/communication/onboarding.html#top-user-benefits-model)!
+Your app needs to display a gallery carousel?. You can adjust this lib to display images as you need
+
+You want to introduce new users to your app? Well, the Material design guidelines have a solution: Displaying the top benefits in a beautiful [auto-rotating carousel](https://material.io/design/communication/onboarding.html#top-user-benefits-model)!
 
 This project implements such a carousel for [Material-UI](https://material-ui-next.com). Visit [the styleguide](https://next.mui.wertarbyte.com/#material-auto-rotating-carousel) for an interactive demo.
 
@@ -11,10 +13,16 @@ This project implements such a carousel for [Material-UI](https://material-ui-ne
 
 ## Installation
 ```shell
-npm i --save material-auto-rotating-carousel
+NPM
+npm i --save material-auto-rotating-gallery
 npm i --save react-swipeable-views
 ```
 
+```shell
+YARN
+yarn add material-auto-rotating-gallery
+yarn add react-swipeable-views
+```
 **Note:** This is the version for Material-UI 1.0.0 or later. If you are using Material-UI 1.0.0-beta, you should update to the latest version. If you are still using Material-UI 0.x, you can use our [legacy version][legacy].
 
 ### AutoRotatingCarousel Properties
