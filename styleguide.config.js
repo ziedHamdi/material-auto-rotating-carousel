@@ -15,6 +15,6 @@ module.exports = {
   webpackConfig,
   getComponentPathLine: (componentPath) => {
     const name = path.basename(componentPath, '.js')
-    return `import { ${name} } from 'material-auto-rotating-carousel';`
+    return `import { ${name} } from 'material-auto-rotating-gallery';`
   }
 }

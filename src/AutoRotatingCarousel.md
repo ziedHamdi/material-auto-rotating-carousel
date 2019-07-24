@@ -6,8 +6,9 @@ const { red, blue, green } = require('@material-ui/core/colors');
 const Button = require('@material-ui/core/Button').default;
 
 <div style={{ position: 'relative', width: '100%', height: 500 }}>
-  <Button onClick={() => setState({ open: true })}>Open carousel</Button>
+  <Button onClick={() => setState({ open: true })}>Click to open carousel at index 1</Button>
   <AutoRotatingCarousel
+    slideIndex={1}
     label='Get started'
     open={state.open}
     onClose={() => setState({ open: false })}
