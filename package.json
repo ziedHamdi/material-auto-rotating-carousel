@@ -1,7 +1,7 @@
 {
-  "name": "material-auto-rotating-carousel",
+  "name": "material-auto-rotating-gallery",
   "version": "3.0.1",
-  "description": "Introduce new users to your app with this material style carousel",
+  "description": "Use this material style carousel to show a list of photos as a caroussel",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TeamWertarbyte/material-auto-rotating-carousel.git"
+    "url": "git+https://github.com/ziedHamdi/material-auto-rotating-carousel.git"
   },
   "keywords": [
     "react",
@@ -21,7 +21,7 @@
     "intro",
     "react-component"
   ],
-  "author": "Wertarbyte <kontakt@wertarbyte.com> (https://wertarbyte.com)",
+  "author": "Zied Hamdi <zhamdi@gmail.com>, forked project of Wertarbyte <kontakt@wertarbyte.com> (https://wertarbyte.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TeamWertarbyte/material-auto-rotating-carousel/issues"
