@@ -4,15 +4,16 @@
 const Slide = require('./Slide').default;
 const { red, blue, green } = require('@material-ui/core/colors');
 const Button = require('@material-ui/core/Button').default;
-
+let index = 1;
 <div style={{ position: 'relative', width: '100%', height: 500 }}>
-  <Button onClick={() => setState({ open: true })}>Click to open carousel at index 1</Button>
+  <Button onClick={() => setState({ open: true })}>Click to open carousel at index {index}</Button>
   <AutoRotatingCarousel
-    slideIndex={1}
+    slideIndex={index}
     label='Get started'
     open={state.open}
     onClose={() => setState({ open: false })}
     onStart={() => setState({ open: false })}
+    onChange={(newIndex)=> {index = newIndex}}
     style={{ position: 'absolute' }}
   >
     <Slide

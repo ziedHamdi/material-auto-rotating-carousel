@@ -111,31 +111,22 @@ const styles = {
 class AutoRotatingCarousel extends Component {
   constructor (props) {
     super(props)
-    this.state = {
-      slideIndex: props.slideIndex ? props.slideIndex : 0
-    }
   }
 
   handleContentClick = (e) => e.stopPropagation() || e.preventDefault()
 
   handleChange = (slideIndex) => {
-    this.setState({
-      slideIndex
-    }, this.onChange(slideIndex))
+		this.onChange(slideIndex)
   }
 
   decreaseIndex () {
-    const slideIndex = this.state.slideIndex - 1
-    this.setState({
-      slideIndex
-    }, this.onChange(slideIndex))
+    const slideIndex = this.props.slideIndex - 1
+		this.onChange(slideIndex)
   }
 
   increaseIndex () {
-    const slideIndex = this.state.slideIndex + 1
-    this.setState({
-      slideIndex
-    }, this.onChange(slideIndex))
+    const slideIndex = this.props.slideIndex + 1
+		this.onChange(slideIndex)
   }
 
   onChange (slideIndex) {
@@ -159,7 +150,8 @@ class AutoRotatingCarousel extends Component {
       ModalProps,
       open,
       onClose,
-      onStart
+      onStart,
+			slideIndex
     } = this.props
     const landscape = mobile && landscapeProp
     const transitionDuration = { enter: duration.enteringScreen, exit: duration.leavingScreen }
@@ -170,7 +162,7 @@ class AutoRotatingCarousel extends Component {
         autoplay={open && autoplay && hasMultipleChildren}
         className={classes.carousel}
         containerStyle={{ height: '100%', ...containerStyle }}
-        index={this.state.slideIndex}
+        index={slideIndex}
         interval={interval}
         onChangeIndex={this.handleChange}
         slideClassName={classes.slide}
@@ -228,7 +220,7 @@ class AutoRotatingCarousel extends Component {
                   hasMultipleChildren &&
                   <Dots
                     count={children.length}
-                    index={modulo(this.state.slideIndex, children.length)}
+                    index={modulo(this.props.slideIndex, children.length)}
                     className={classNames(classes.dots, {
                       [classes.dotsMobile]: mobile,
                       [classes.dotsMobileLandscape]: landscape
