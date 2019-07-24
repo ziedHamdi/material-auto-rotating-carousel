@@ -1,6 +1,6 @@
 {
   "name": "material-auto-rotating-gallery",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Use this material style carousel to show a list of photos as a caroussel",
   "main": "lib/index.js",
   "scripts": {

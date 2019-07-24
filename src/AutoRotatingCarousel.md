@@ -6,14 +6,21 @@ const { red, blue, green } = require('@material-ui/core/colors');
 const Button = require('@material-ui/core/Button').default;
 let index = 1;
 <div style={{ position: 'relative', width: '100%', height: 500 }}>
-  <Button onClick={() => setState({ open: true })}>Click to open carousel at index {index}</Button>
+  <Button onClick={() => {
+      index++; 
+      setState({ open: true })
+    }
+  }>Click to open carousel at index {index}</Button>
   <AutoRotatingCarousel
     slideIndex={index}
     label='Get started'
     open={state.open}
     onClose={() => setState({ open: false })}
     onStart={() => setState({ open: false })}
-    onChange={(newIndex)=> {index = newIndex}}
+    onChange={(newIndex)=> {
+      console.log("onChange called : ", newIndex, ":", new Error()) 
+      index = newIndex
+    }}
     style={{ position: 'absolute' }}
   >
     <Slide

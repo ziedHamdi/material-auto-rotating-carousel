@@ -116,7 +116,7 @@ class AutoRotatingCarousel extends Component {
   handleContentClick = (e) => e.stopPropagation() || e.preventDefault()
 
   handleChange = (slideIndex) => {
-		this.onChange(slideIndex)
+		// this.onChange(slideIndex)
   }
 
   decreaseIndex () {
